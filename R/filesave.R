@@ -37,6 +37,7 @@ shinyFileSave <- function(input, id, updateFreq = 0, session = getSession(),
     dir <- input[[paste0(id, "-modal")]]
     createDir <- input[[paste0(id, "-newDir")]]
 
+    ## allows reactive links (e.g., for filetypes)
     fileGet <- do.call(fileGetter, list(...))
     dirCreate <- do.call(dirCreator, list(...))
     
